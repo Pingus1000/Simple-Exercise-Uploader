@@ -1,0 +1,6 @@
+.odt = application/vnd.oasis.opendocument.text
+.pdf = application/pdf
+.jpg = image/jpeg
+.png = image/png
+.ods = application/vnd.oasis.opendocument.spreadsheet
+.txt = text/plain

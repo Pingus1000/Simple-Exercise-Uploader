@@ -1,5 +1,7 @@
 
 <?php
+$domain = file_get_contents('../config/domain.txt');
+$programmname = "megz";
 if(!isset($_COOKIE['klasse'])) {
 echo "<form method=\"post\" action=\"./aufgaben.php\">
 <label for=\"klasse\">Klasse:</label>
@@ -15,7 +17,7 @@ echo "<form method=\"post\" action=\"./aufgaben.php\">
 return;
 }
 else {
-	header('Location: http://192.168.2.107/megz/schüler/aufgaben.php'); 
+	header("Location: http://$domain/$programmname/schüler/aufgaben.php"); 
 	
 }
 ?> 

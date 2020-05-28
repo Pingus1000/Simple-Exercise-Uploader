@@ -4,7 +4,8 @@
 </head>
 <body>       
 <?php 
-
+$programmname = "megz";
+$programmpath = file_get_contents('../config/path.txt');
 $allowTypes = array("1" => "application/vnd.oasis.opendocument.text", "2" => "application/pdf", "3" => "image/jpeg", "4" => "image/png", "5" => "application/vnd.oasis.opendocument.spreadsheet", "6" => ".txt = text/plain");
 $klasse = htmlspecialchars($_POST['klasse']); // Angegeben Klasse
 $fach = htmlspecialchars($_POST['fach']); // Angegebens Fach
@@ -12,9 +13,10 @@ $abgabe = htmlspecialchars($_POST['abgabe']); //Abgabedatum
 $datei = $_FILES['userfile']['name']; // Name der Datei
 $dateipfad = "uploads/files/$datei"; //pfad von Anhang
 $dateitype = $_FILES['userfile']['type'];
-$filename = "uploads/$klasse.json";
-$uploaddir = "/var/www/html/megz/lehrer/uploads/files/";
-$filecontent = "<a href=\"http://192.168.2.107/megz/lehrer/$dateipfad\">$fach bis zum $abgabe</a> </br>
+$filename = "uploads/$klasse.txt";
+$uploaddir = "$programmpath/$programmname/lehrer/uploads/files/";
+$domain = file_get_contents('../config/domain.txt');
+$filecontent = "<a href=\"http://$domain/$programmname/lehrer/$dateipfad\">$fach bis zum $abgabe</a> </br>
 
 ";
 

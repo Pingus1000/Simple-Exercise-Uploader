@@ -41,7 +41,7 @@ f.write(pfad)
 f.close
 
 f = open(pfad + "/config/name.txt", "w")
-f.write("Simple-Exercise-Uploder")
+f.write("Simple-Exercise-Uploader")
 f.close
 print("Fertig")
 

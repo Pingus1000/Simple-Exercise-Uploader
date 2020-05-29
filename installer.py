@@ -7,7 +7,7 @@ print ("Welche Domain oder IP verwendest du? (Zum Beispiel: sample.de oder 192.1
 domain = input()
 print ("Deine Informationen:")
 print (pfad)
-pfad = pfad + "/Simple-Exercise-Uploader"
+
 print (domain)
 print ("Sind die Informationen korrekt? (j|n)")
 confirm = input()
@@ -27,6 +27,10 @@ else:
         pfad = input()
     else:
         print ("Es scheint alles korrekt zu sein. Starte Installation") 
+
+pfad1 = pfad
+pfad = pfad + "/Simple-Exercise-Uploader"
+
 print("Erstelle Configordner")
 config = pfad + "/config"
 print (config)
@@ -37,7 +41,7 @@ f.write(domain)
 f.close
 
 f = open(pfad + "/config/path.txt", "w")
-f.write(pfad)
+f.write(pfad1)
 f.close
 
 f = open(pfad + "/config/name.txt", "w")

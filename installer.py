@@ -60,7 +60,7 @@ print("Setze Brechtigungen")
 
 os.chmod(pfad + "/lehrer/uploads", stat.S_IRWXO)
 os.chmod(pfad + "/lehrer/uploads/files", stat.S_IRWXO)
-os.chmod(pfad + "pfad + "/config/name.txt", stat.S_IRWXO)
+os.chmod(pfad + "/config/name.txt", stat.S_IRWXO)
 print("Fertig")
 print("Drücke Enter um die Installation abzuschließen")
 text = input() 

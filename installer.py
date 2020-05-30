@@ -1,4 +1,4 @@
-import os, sys
+import os, sys, stat
 print ("Willkommen zum Installer von Simple-Exercise-Uploder(SEU). by Pingus1000")
 print ("Folge einfach den Scritten um SEU auf deinem Server zu konfigurieren")
 print ("Bitte gebe den Pfad an wo der SEU Ordner ist (Zum Beispiel: C:\\xampp\\htdocs\\ oder /var/www/html")
@@ -54,6 +54,12 @@ print("Erstelle Ordner")
 
 os.mkdir(pfad + "/lehrer/uploads")
 os.mkdir(pfad + "/lehrer/uploads/files")
+print("Fertig")
+
+print("Setze Brechtigungen")
+
+os.chmod(pfad + "/lehrer/uploads", stat.S_IRWXO)
+os.chmod(pfad + "/lehrer/uploads/files", stat.S_IRWXO)
 print("Fertig")
 print("Drücke Enter um die Installation abzuschließen")
 text = input() 

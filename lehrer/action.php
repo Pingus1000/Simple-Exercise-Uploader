@@ -4,7 +4,7 @@
 </head>
 <body>       
 <?php 
-$programmpath = file_get_contents('../config/name.txt');
+$programmname = file_get_contents('../config/name.txt');
 $programmpath = file_get_contents('../config/path.txt');
 $allowTypes = array("1" => "application/vnd.oasis.opendocument.text", "2" => "application/pdf", "3" => "image/jpeg", "4" => "image/png", "5" => "application/vnd.oasis.opendocument.spreadsheet", "6" => ".txt = text/plain");
 $klasse = htmlspecialchars($_POST['klasse']); // Angegeben Klasse

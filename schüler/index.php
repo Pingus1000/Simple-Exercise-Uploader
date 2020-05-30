@@ -1,7 +1,7 @@
 
 <?php
 $domain = file_get_contents('../config/domain.txt');
-$programmname = "megz";
+$programmname = file_get_contents('../config/name.txt');
 if(!isset($_COOKIE['klasse'])) {
 echo "<form method=\"post\" action=\"./aufgaben.php\">
 <label for=\"klasse\">Klasse:</label>

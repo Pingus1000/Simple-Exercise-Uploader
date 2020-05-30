@@ -4,7 +4,7 @@
 </head>
 <body>
 <?php
-$programmname = "megz";
+$programmname = file_get_contents('../config/name.txt');
 $klasse = htmlspecialchars($_POST['klasse']);
 $domain = file_get_contents('../config/domain.txt');
 if(!isset($_COOKIE['klasse'])) {

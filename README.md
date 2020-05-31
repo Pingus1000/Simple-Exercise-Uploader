@@ -7,5 +7,26 @@ Unter Windows ist es etwas anders. Du musst dir ZIP Datei runterladen und in dem
 
 Unter Mac... Nö!
 
-## Wie nutze ich und konfiguriere SEU?
-** Noch in Bearbeitung **
+Du vertraust dem Installer nicht oder hast kein Python installiert? Kein Problem! Du kannst auch alles per Hand installieren. Lege dazu folgende Ordnerstruktur an. 
+```
+Simple-Exercise-Uploader
+|
+|---config
+|     `
+|     |--domain.txt
+|     |--name.txt
+|     `--path.txt
+|
+|--lehrer
+|     `uploads
+|         `files
+|
+|--schüler
+```
+In die `domain.txt` muss deine verwendete Domain oder IPv4-Adresse. </br>
+In die `name.txt`muss der Name des Ordners (Standart `Simple-Exercise-Uploader`). </br>
+In die `path.txt`muss der Pfad zu dem Programmordner (Zum Beispiel `/var/www/html`). </br>
+
+
+## Wie nutze und konfiguriere ich SEU?
+<b> Noch in Bearbeitung </b>

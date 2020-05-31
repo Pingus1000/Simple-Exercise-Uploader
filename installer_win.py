@@ -1,4 +1,5 @@
 import os, sys, stat
+print ("#BlackLivesMatter")
 print ("Willkommen zum Installer von Simple-Exercise-Uploder(SEU). by Pingus1000")
 print ("Folge einfach den Scritten um SEU auf deinem Server zu konfigurieren")
 print ("Bitte gebe den Pfad an wo der SEU Ordner ist (Zum Beispiel: C:\\xampp\\htdocs\\ oder /var/www/html")

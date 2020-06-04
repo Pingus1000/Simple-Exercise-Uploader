@@ -1,4 +1,5 @@
 import os, sys, stat
+import hashlib
 print ("#BlackLivesMatter")
 print ("Willkommen zum Installer von Simple-Exercise-Uploder(SEU). by Pingus1000")
 print ("Folge einfach den Scritten um SEU auf deinem Server zu konfigurieren")
@@ -6,10 +7,13 @@ print ("Bitte gebe den Pfad an wo der SEU Ordner ist (Zum Beispiel: C:\\xampp\\h
 pfad = input() 
 print ("Welche Domain oder IP verwendest du? (Zum Beispiel: sample.de oder 192.168.2.110)")
 domain = input()
+print ("Wähle ein Passwort für die Lehrer")
+pw = input()
 print ("Deine Informationen:")
 print (pfad)
-
 print (domain)
+print (pw)
+
 print ("Sind die Informationen korrekt? (j|n)")
 confirm = input()
 if confirm == "j":
@@ -18,6 +22,7 @@ else:
     print("Bitte schreibe welche Information falsch ist?")
     print("Domain")
     print("Pfad")
+    print("Passwort")
     print("Nichts")
     wrong = input()
     if wrong == "Domain":
@@ -26,6 +31,9 @@ else:
     elif wrong == "Pfad":
         print ("Bitte gebe den Pfad an wo der SEU Ordner ist (Zum Beispiel: C:\\xampp\\htdocs\\ oder /var/www/html")
         pfad = input()
+    elif wrong == "Passwort":
+        print ("Wähle ein Passwort für die Lehrer")
+        pw = input()
     else:
         print ("Es scheint alles korrekt zu sein. Starte Installation") 
 
@@ -57,11 +65,22 @@ os.mkdir(pfad + "/lehrer/uploads")
 os.mkdir(pfad + "/lehrer/uploads/files")
 print("Fertig")
 
+print("Erstelle Passwortsetup")
+os.mkdir("/etc/Simple-Exercise-Uploader")
+
+hash_obj = hashlib.md5(pw.encode())
+pwhash = hash_obj.hexdigest()
+
+f = open("/etc/Simple-Exercise-Uploader/password.txt", "w")
+f.write(pwhash)
+f.close
+print("Fertig")
 print("Setze Brechtigungen")
 
 os.chmod(pfad + "/lehrer/uploads", stat.S_IRWXO)
 os.chmod(pfad + "/lehrer/uploads/files", stat.S_IRWXO)
 os.chmod(pfad + "/config/name.txt", stat.S_IRWXO)
+os.chmod(pfad + "/etc/Simple-Exercise-Uploader/password.txt", stat.S_IRWXO)
 print("Fertig")
 print("Drücke Enter um die Installation abzuschließen")
 text = input() 

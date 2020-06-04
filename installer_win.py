@@ -57,6 +57,16 @@ os.mkdir(pfad + "/lehrer/uploads")
 os.mkdir(pfad + "/lehrer/uploads/files")
 print("Fertig")
 
+print("Erstelle Passwortsetup")
+os.mkdir("C:\\xampp\\config")
+
+hash_obj = hashlib.md5(pw.encode())
+pwhash = hash_obj.hexdigest()
+
+f = open("C:\\xampp\\config\\password.txt", "w")
+f.write(pwhash)
+f.close
+print("Fertig")
 
 print("Drücke Enter um die Installation abzuschließen")
 text = input() 

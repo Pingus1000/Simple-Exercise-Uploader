@@ -7,7 +7,7 @@ print ("Bitte gebe den Pfad an wo der SEU Ordner ist (Zum Beispiel: C:\\xampp\\h
 pfad = input() 
 print ("Welche Domain oder IP verwendest du? (Zum Beispiel: sample.de oder 192.168.2.110)")
 domain = input()
-print ("Wähle ein Passwort für die Lehrer")
+print ("WÃ¤hle ein Passwort fÃ¼r die Lehrer")
 pw = input()
 print ("Deine Informationen:")
 print (pfad)
@@ -32,7 +32,7 @@ else:
         print ("Bitte gebe den Pfad an wo der SEU Ordner ist (Zum Beispiel: C:\\xampp\\htdocs\\ oder /var/www/html")
         pfad = input()
     elif wrong == "Passwort":
-        print ("Wähle ein Passwort für die Lehrer")
+        print ("WÃ¤hle ein Passwort fÃ¼r die Lehrer")
         pw = input()
     else:
         print ("Es scheint alles korrekt zu sein. Starte Installation") 
@@ -80,9 +80,9 @@ print("Setze Brechtigungen")
 os.chmod(pfad + "/lehrer/uploads", stat.S_IRWXO)
 os.chmod(pfad + "/lehrer/uploads/files", stat.S_IRWXO)
 os.chmod(pfad + "/config/name.txt", stat.S_IRWXO)
-os.chmod(pfad + "/etc/Simple-Exercise-Uploader/password.txt", stat.S_IRWXO)
+os.chmod("/etc/Simple-Exercise-Uploader/password.txt", stat.S_IRWXO)
 print("Fertig")
-print("Drücke Enter um die Installation abzuschließen")
+print("DrÃ¼cke Enter um die Installation abzuschlieÃŸen")
 text = input() 
 
 

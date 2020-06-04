@@ -1,5 +1,6 @@
 
 <?php
+$pwdest = "/etc/Simple-Exercise-Uploader/password.txt";
 echo "<form  method=\"post\" name=\"aufgabe\" action=\"\">
 	<label for \"pw\">Passwort:</label>
 	<input type=\"password\" name=\"pw\" id=\"pw\" \>
@@ -7,7 +8,7 @@ echo "<form  method=\"post\" name=\"aufgabe\" action=\"\">
 </form>
 ";
 $pw = htmlspecialchars($_POST['pw']);
-$setpw = file_get_contents('/etc/Simple-Exercise-Uploader/password.txt');
+$setpw = file_get_contents($pwdest);
 $pwhash = md5($pw);
 //echo($setpw); 
 

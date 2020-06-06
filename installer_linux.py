@@ -19,23 +19,9 @@ confirm = input()
 if confirm == "j":
     print("Die Installation wird gestartet")
 else:
-    print("Bitte schreibe welche Information falsch ist?")
-    print("Domain")
-    print("Pfad")
-    print("Passwort")
-    print("Nichts")
-    wrong = input()
-    if wrong == "Domain":
-        print ("Welche Domain oder IP verwendest du? (Zum Beispiel: sample.de oder /192.168.2.110)")
-        domain = input() 
-    elif wrong == "Pfad":
-        print ("Bitte gebe den Pfad an wo der SEU Ordner ist (Zum Beispiel: C:\\xampp\\htdocs\\ oder /var/www/html")
-        pfad = input()
-    elif wrong == "Passwort":
-        print ("WÃ¤hle ein Passwort fÃ¼r die Lehrer")
-        pw = input()
-    else:
-        print ("Es scheint alles korrekt zu sein. Starte Installation") 
+    print("Bitte starte den Installationsprozess neu")
+    lol = input()
+    quit()
 
 pfad1 = pfad
 pfad = pfad + "/Simple-Exercise-Uploader"

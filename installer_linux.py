@@ -14,14 +14,15 @@ print (pfad)
 print (domain)
 print (pw)
 
-print ("Sind die Informationen korrekt? (j|n)")
-confirm = input()
 if confirm == "j":
     print("Die Installation wird gestartet")
-else:
+elif confirm == "n":
     print("Bitte starte den Installationsprozess neu")
     lol = input()
-    quit()
+    sys.exit("Installationsprozess abgebrochen")
+else:
+    print("???")
+    sys.exit("Installationsprozess abgebrochen ")
 
 pfad1 = pfad
 pfad = pfad + "/Simple-Exercise-Uploader"

@@ -7,7 +7,7 @@ print ("Bitte gebe den Pfad an wo der SEU Ordner ist (Zum Beispiel: C:\\xampp\\h
 pfad = input() 
 print ("Welche Domain oder IP verwendest du? (Zum Beispiel: sample.de oder 192.168.2.110)")
 domain = input()
-print ("WÃ¤hle ein Passwort fÃ¼r die Lehrer")
+print ("Wähle ein Passwort für die Lehrer")
 pw = input()
 print ("Deine Informationen:")
 print (pfad)
@@ -68,7 +68,7 @@ os.chmod(pfad + "/lehrer/uploads/files", stat.S_IRWXO)
 os.chmod(pfad + "/config/name.txt", stat.S_IRWXO)
 os.chmod("/etc/Simple-Exercise-Uploader/password.txt", stat.S_IRWXO)
 print("Fertig")
-print("DrÃ¼cke Enter um die Installation abzuschlieÃŸen")
+print("Drücke Enter um die Installation abzuschlieÃŸen")
 text = input() 
 
 

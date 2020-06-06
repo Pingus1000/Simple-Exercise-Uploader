@@ -1,3 +1,4 @@
+# This Python file uses the following encoding: utf-8
 import os, sys, stat
 print ("#BlackLivesMatter")
 print ("Willkommen zum Installer von Simple-Exercise-Uploder(SEU). by Pingus1000")
@@ -6,29 +7,26 @@ print ("Bitte gebe den Pfad an wo der SEU Ordner ist (Zum Beispiel: C:\\xampp\\h
 pfad = input() 
 print ("Welche Domain oder IP verwendest du? (Zum Beispiel: sample.de oder 192.168.2.110)")
 domain = input()
+print ("Bitte wähle ien Ort aus wo das Passwort gespeichert wird. Dieser Ort sollte nicht in einem Html Ordner sein und von außen nicht aufrufbar sein! Zum Beispiel C:\\xampp\\htdocs\\config. Wenn der Ordner nicht existiert, wird er erstellt ")
+pwdest = input()
+print ("Wähle ein Passwort für die Lehrer")
+pw = input()
 print ("Deine Informationen:")
 print (pfad)
-
 print (domain)
+print (pwdest)
+print(pw)
 print ("Sind die Informationen korrekt? (j|n)")
 confirm = input()
 if confirm == "j":
     print("Die Installation wird gestartet")
+elif confirm == "n":
+    print("Bitte starte den Installationsprozess neu")
+    lol = input()
+    sys.exit("Installationsprozess abgebrochen")
 else:
-    print("Bitte schreibe welche Information falsch ist?")
-    print("Domain")
-    print("Pfad")
-    print("Nichts")
-    wrong = input()
-    if wrong == "Domain":
-        print ("Welche Domain oder IP verwendest du? (Zum Beispiel: sample.de oder /192.168.2.110)")
-        domain = input() 
-    elif wrong == "Pfad":
-        print ("Bitte gebe den Pfad an wo der SEU Ordner ist (Zum Beispiel: C:\\xampp\\htdocs\\ oder /var/www/html")
-        pfad = input()
-    else:
-        print ("Es scheint alles korrekt zu sein. Starte Installation") 
-
+    print("???")
+    sys.exit("Installationsprozess abgebrochen ")
 pfad1 = pfad
 pfad = pfad + "/Simple-Exercise-Uploader"
 
@@ -58,12 +56,14 @@ os.mkdir(pfad + "/lehrer/uploads/files")
 print("Fertig")
 
 print("Erstelle Passwortsetup")
-os.mkdir("C:\\xampp\\config")
+if (!os.path.isdir(pwdest)):
+
+    os.mkdir(pwdest)
 
 hash_obj = hashlib.md5(pw.encode())
 pwhash = hash_obj.hexdigest()
 
-f = open("C:\\xampp\\config\\password.txt", "w")
+f = open(pwdest . "\password.txt", "w")
 f.write(pwhash)
 f.close
 print("Fertig")

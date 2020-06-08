@@ -13,7 +13,8 @@ print ("Deine Informationen:")
 print (pfad)
 print (domain)
 print (pw)
-
+print ("Sind alle Informationen korrekt? (j|n)")
+confirm = input()
 if confirm == "j":
     print("Die Installation wird gestartet")
 elif confirm == "n":

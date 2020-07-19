@@ -1,8 +1,0 @@
--Create Config Folder (C:\xampp\htdocs\Simple-Exercise-Uploader\) with the Name 'config
--Create in Config Foler 'domain.txt', Content: Your Domain like example.com or 127.0.0.1
--Create in Config Foler 'path.txt', Content: The Path to the Folder  like C:\xampp\htdocs
--Create Folder 'uploads' in ./lehrer
--Create Folder 'files' in ./lehrer/uploads
--Create a other where the passwd is saved like C:\xampp\config
--Create in that 'password.txt. Use the 'hash.py' to generate a MD5 Hash and write in the 'password.txt'
--Change the Variable 'pwdest to your Password Destination in './lehrer/upload.php' and in './misc/change_PW.py' You can use Notepad or Notepad ++   
